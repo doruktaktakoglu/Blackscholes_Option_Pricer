@@ -5,7 +5,6 @@ class BlackScholesInput(BaseModel):
     S: float = Field(..., gt=0, description="Spot price of the underlying asset")
     K: float = Field(..., gt=0, description="Strike price")
     T: float = Field(..., gt=0, description="Time to maturity in years")
-    r: float = Field(..., description="Risk-free interest rate (annualized)")
     sigma: float = Field(..., gt=0, description="Volatility of the underlying asset")
     option_type: Literal['call', 'put']
 
